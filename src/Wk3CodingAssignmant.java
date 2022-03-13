@@ -3,44 +3,6 @@ import java.util.Scanner;
 public class Wk3CodingAssignmant {
 
 	public static void main(String[] args) {
-		//Question 1
-		int[] ages = new int[] {3, 9, 23, 64, 2, 8, 28, 93, 6};
-		
-		int sub =  ages[0] - ages[ages.length - 1];
-			System.out.println(sub);
-		
-			int avgLength = avgAgeLength(ages);
-			System.out.println("The average age is " + avgLength);
-			
-			//Question 2a
-			int nameTotal = 0;
-			String[] names = new String[] {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
-			
-					for(String name: names) {
-						nameTotal += name.length();
-					}
-					System.out.println(nameTotal / names.length);
-				
-			//Question 2b
-			for(String name: names) {
-				System.out.print(name + " ");
-			}
-			System.out.println(" ");
-			//Question 5
-			int[] nameLengths = new int[names.length];
-				for(int i = 0; i < names.length; i++) {
-					nameLengths[i] = names[i].length();
-					System.out.println("Name length of this name is: " + nameLengths[i]);
-				}
-
-			//Question 6
-			int sum = 0;
-			for(int i = 0; i < names.length; i++) {
-				sum += names[i].length();
-			}System.out.println("The total sum is: " + sum); 
-			
-			
-			
 			//question 8 variables
 			String firstName = "Cooper";
 			String lastName = "Johnson";
@@ -65,19 +27,53 @@ public class Wk3CodingAssignmant {
 			int number;
 			number = in1.nextInt();
 			System.out.println(divisible(number));
+			
+		//Question 1
+		int[] ages = new int[] {3, 9, 23, 64, 2, 8, 28, 93, 6};
+		
+			int sub =  ages[0] - ages[ages.length - 1];
+			System.out.println(sub);
+		
+			int avgLength = avgAgeLength(ages);
+			System.out.println("The average age is " + avgLength);
+			
+			//Question 2a
+			int nameTotal = 0;
+			String[] names = new String[] {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
+			
+			for(String name: names) {
+				nameTotal += name.length();
+			}
+			System.out.println(nameTotal / names.length);
+				
+			//Question 2b
+			for(String name: names) {
+				System.out.print(name + " ");
+			}
+			System.out.println(" ");
+			//Question 5
+			int[] nameLengths = new int[names.length];
+			for(int i = 0; i < names.length; i++) {
+				nameLengths[i] = names[i].length();
+				System.out.println("Name length of this name is: " + nameLengths[i]);
+			}
+
+			//Question 6
+			int sum = 0;
+			for(int i = 0; i < names.length; i++) {
+				sum += names[i].length();
+			}
+			System.out.println("The total sum is: " + sum); 
+
 		//end of MAIN	
 	}		
 		//Question 7
 		static String ans = "";
-		
 		static String conc(String word, int n) {
-			
-			
 			for(int i = 0;i < n; i++) {
 				ans += word;
 			}	
-				return ans;
-				
+			return ans;	
 		}	
 		
 		//Question 8
@@ -96,30 +92,30 @@ public class Wk3CodingAssignmant {
 		}
 	
 		//Question 10
-			static double avgDub(double[] avg) {
+		static double avgDub(double[] avg) {
 			double qTen= 0;
-				for(int i = 0; i < avg.length; i++) {
-					qTen += avg.length;
-				}
-				return qTen / avg.length;
+			for(int i = 0; i < avg.length; i++) {
+				qTen += avg.length;
 			}
+			return qTen / avg.length;
+		}
 			
 			//Question 11
-			static boolean qEleven(double[] one, double[] two) {
+		static boolean qEleven(double[] one, double[] two) {
 			double qEleven1 = 0;
 			double qEleven2 = 0;
-				for(int i = 0; i < one.length; i++) {
-					qEleven1 += one.length;
-				} 
-						for(int i = 0; i < two.length; i++) {
-							qEleven2 += two.length;
-						} 
-				return qEleven1 > qEleven2;
-			}
+			for(int i = 0; i < one.length; i++) {
+				qEleven1 += one.length;
+			} 
+			for(int i = 0; i < two.length; i++) {
+				qEleven2 += two.length;
+			} 
+			return qEleven1 > qEleven2;
+		}
 			
 		//Question 12
 		static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) {
-			return isHotOutside = true && moneyInPocket > 10.50;
+			return isHotOutside && moneyInPocket > 10.50;
 		}
 		
 		//Question 13
@@ -143,14 +139,14 @@ public class Wk3CodingAssignmant {
 					divisible = false;
 				}
 				return divisible;
-			}
+		}
 	//Average age finder Q1
 		static int avgAgeLength(int[] ages) {
-		int total= 0;
-				for(int i = 0; i < ages.length; i++) {
-					total += ages[i];
-				}
-				return total / ages.length;
+			int total= 0;
+			for(int i = 0; i < ages.length; i++) {
+				total += ages[i];
+			}
+			return total / ages.length;
 				
 		
 		}
